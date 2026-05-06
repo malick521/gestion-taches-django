@@ -1,0 +1,16 @@
+{% extends 'base.html'%}
+
+{% block title %}
+    Change Task
+{% endblock %}
+
+{% block content %}
+    <form method="POST">
+        <h2>Modifier</h2>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Enregistrez</button>
+    </form>
+    <a href="{% url 'view' %}">🔙Retournez</a>
+{% endblock %}
+

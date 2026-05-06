@@ -1,0 +1,96 @@
+*{
+    padding:0;
+    margin:0;
+}
+body{
+    font-family: 'Arial';
+    background-color: #f2f2f2f2;
+}
+
+main{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header, footer{
+    background-color: #000;
+    color: white;
+}
+
+header{
+    padding: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+footer{
+    padding: 10px;
+    text-align: center;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+th{
+    background-color: #000;
+    color:white;
+}
+
+th,td{
+    padding: 10px;
+}
+
+section{
+    text-align: center;
+}
+section p {
+    color:gray;
+}
+
+form{
+    background-color: #fff;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 0 3px #000;
+}
+
+form input, textarea{
+    width: 100%;
+    border: solid 1px #0d0d0dde;
+    border-radius: 5px;
+    padding: 9px;
+    box-sizing: border-box;
+    margin: 10px auto;
+}
+
+form p {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:8px;
+}
+
+form textarea{
+    resize: none;
+}
+
+button {
+     border: none;
+     border-radius: 8px;
+     padding: 12px;
+     cursor: pointer;
+     background-color: black;
+     color:white;
+     margin-top: 40px;
+}
+.button-home{
+    
+}

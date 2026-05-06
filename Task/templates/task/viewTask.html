@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}
+View Task
+{% endblock %}
+
+{% block content %}
+    <h1>Vos taches</h1>
+
+    <table border=1>
+        <tr>
+            <th>Tache</th>
+            <th>Description</th>
+            <th>Status</th>
+            <th>Date crée</th>
+            <th>Terminer</th>
+            <th>Supprimer</th>
+            <th>Modifier</th>
+        </tr>
+        {% for task in tasks %}
+            <tr>
+                <td>{{ task.name }}</td>
+                <td>{{ task.description }}</td>
+                <td>{{ task.status|yesno:'En cours,Terminé' }}</td>
+                <td>{{ task.date_created }}</td>
+                <td><a href="#">✅</a></td>
+                <td><a href="/deleteTask/{{task.id}}">🗑️</a></td>
+                <td><a href="/changeTask/{{task.id}}">📝</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+    <a href="{% url 'add' %}">Ajouter une tache</a>
+{% endblock %}

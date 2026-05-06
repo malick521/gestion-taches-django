@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}
+Add Task
+{% endblock %}
+
+{% block content %}
+
+   <form method="POST">
+        <h2>Ajouter une tache</h2>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Ajouter</button>
+   </form>
+   <a href="{% url 'view' %}">Voir tache(s)</a>
+
+{% endblock %}

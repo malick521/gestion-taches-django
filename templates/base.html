@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}
+            
+        {% endblock %}
+    </title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <header>
+        {% block header %}
+            <h2>To-Do App</h2>
+        {% endblock %}
+    </header>
+
+    <main>
+        <section>
+            {% block content %}
+
+            {% endblock %}
+        </section>
+    </main>
+
+    <footer>
+        Copyright 2026
+    </footer>
+</body>
+</html>
